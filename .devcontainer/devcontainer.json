@@ -2,9 +2,13 @@
   "name": "compdata-docling",
   "image": "mcr.microsoft.com/devcontainers/python:1-3.12-bookworm",
   "features": {
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "lts"
-    }
+        "ghcr.io/devcontainers/features/docker-in-docker:1": {
+            "version": "latest"
+        },
+        // This is the best way to get Node & npm installed automatically
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "20" 
+        }
   },
   "containerEnv": {
     "HF_HOME": "/tmp/",
